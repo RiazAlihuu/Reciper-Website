@@ -1,0 +1,1957 @@
+/* Reset styles and basic settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section styles */
+section {
+    width: 100%;
+    height: 100vh;
+}
+z
+/* Navigation styles */
+section nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(221, 217, 2, 0.5);
+    z-index: 1000;
+}
+
+section nav .logo img {
+    width: 100px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+section nav ul {
+    list-style: none;
+    display: flex;
+}
+
+section nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#Home > nav > ul li a {
+    text-decoration: none;
+    color: #0a0101;
+    font-weight: 500;
+    font-size: 17px;
+    position: relative;
+    transition: 0.1s;
+}
+
+#Home > nav > ul li a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fdf903;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s ease;
+}
+
+#Home > nav > ul li a:hover:after {
+    width: 100%;
+}
+
+section nav .icon i {
+    font-size: 18px;
+    color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section nav .icon i:hover {
+    color: rgb(251, 255, 0);
+}
+
+/* Main section styles */
+section .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 130px;
+}
+
+section .main .men_text {
+    text-align: center;
+}
+
+section .main .men_text h1 {
+    font-size: 60px;
+    position: relative;
+}
+
+section .main .men_text h1 span {
+    margin-left: 15px;
+    color: yellow;
+    font-family: mv boli;
+    line-height: 1.2;
+}
+
+.main-image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.main-image img {
+    width: 700px;
+    border-radius: 10px;
+}
+
+/* About section styles */
+.about {
+    width: 100%;
+    padding: 70px 0;
+    background-color: #f8f8f8;
+}
+
+.about .about_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.about .about_main .image {
+    position: relative;
+    z-index: 1; /* Ensure this image is above other content */
+}
+
+.about .about_main .image img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about .about_main .abouot_text {
+    max-width: 600px;
+    position: relative;
+    z-index: 2; /* Ensure this text is above the image */
+}
+
+.about .about_main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about .about_main h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.about .about_main p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Button styles */
+.order-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #f39c12;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+}
+
+.order-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.order-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.order-button span {
+    position: relative;
+    z-index: 1;
+}
+/* About section styles */
+.about {
+    width: 100%;
+    padding: 70px 0;
+    background-color: #f8f8f8;
+}
+
+.about .about_main {
+    display: flex;
+    flex-direction: column; /* Align items in a column for vertical arrangement */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.about .about_main .image {
+    width: 100%; /* Make the image container full-width */
+    position: relative;
+    z-index: 1; /* Ensure this image is above other content */
+}
+
+.about .about_main .image img {
+    width: 100%; /* Make the image full-width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    max-width: none; /* Remove any maximum width constraints */
+    margin-top: 50px; /* Push the image slightly lower */
+}
+
+.about .about_main .abouot_text {
+    max-width: 600px;
+    position: relative;
+    z-index: 2; /* Ensure this text is above the image */
+}
+
+.about .about_main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about .about_main h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.about .about_main p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+.about-section {
+    display: flex;
+    align-items: flex-start; /* Aligns items to the top */
+    justify-content: center;
+    padding: 50px;
+}
+
+.about-image img {
+    width: 600px; /* Increase the width for a larger image */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensures the image covers the container nicely */
+    border-radius: 50%; /* Optional: makes the image circular */
+    margin-right: 30px; /* Adds space between the image and the text */
+    margin-top: 150px; /* Moves the image even further down */
+}
+
+.about-content {
+    max-width: 40%; /* Adjusts the content width */
+    text-align: left; /* Aligns text to the left */
+    margin-top: 150px; /* Moves the content further down to match the image */
+}
+
+.about-content h2 {
+    font-size: 2em;
+    color: #FFC107; /* Adjust color as needed */
+}
+
+.about-content p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.about .about_main .abouot_text p{
+    width: 650px;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 22px;
+}
+.about .about_btn{
+    background: #f39c12;
+    padding: 12px 25px;
+    text-decoration: #fff;
+    color: #fff;
+    position: relative;
+    left: 55%;
+    bottom: 30px;
+}
+
+/* Button styles */
+.order-now {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #f1c40f; /* Yellow color */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px; /* Slightly rounded corners */
+    margin-top: 20px; /* Space between the paragraph and button */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.order-now::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3); /* Light overlay for effect */
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+}
+
+.order-now:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.order-now:hover {
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+    background-color: #f39c12; /* Darker yellow on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.order-now span {
+    position: relative;
+    z-index: 1;
+}
+.about-section .about-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold; /* Make text bold */
+}
+.about-section .about-content p {
+    font-size: 1rem; /* Adjust the text size */
+    line-height: 1.8; /* Increase line height for readability */
+    color: #555; /* Dark grey color for better readability */
+    margin-bottom: 30px; /* Space below the paragraph */
+    padding: 15px; /* Add padding inside the paragraph */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    border-left: 4px solid #f1c40f; /* Yellow left border for emphasis */
+    border-radius: 5px; /* Rounded corners for the background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: justify; /* Justify the text for a clean look */
+}
+
+.Menu {
+    padding: 50px 0;
+    background-color: #f4f4f4; /* Light background for the section */
+    text-align: center; /* Center-align text */
+}
+
+.Menu h1 {
+    font-size: 3rem; /* Large font size for the heading */
+    color: #333; /* Dark grey color for text */
+    margin-bottom: 20px; /* Space below the heading */
+    font-family: 'Roboto', sans-serif; /* Clean font */
+}
+
+.Menu h1 span {
+    color: #f1c40f; /* Yellow color for the highlighted part */
+}
+
+.menu_box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between menu cards */
+}
+
+.menu_card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.menu_card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.menu-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 4px solid #f1c40f; /* Yellow border below the image */
+}
+
+.small_card {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.small_card i {
+    font-size: 20px;
+    color: #f1c40f; /* Yellow color for the icon */
+}
+
+.menu_info {
+    padding: 20px;
+}
+
+.menu_info h2 {
+    font-size: 1.8rem; /* Font size for the dish name */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.menu_info p {
+    font-size: 1rem; /* Font size for the description */
+    color: #666; /* Slightly lighter color for text */
+    margin-bottom: 10px;
+}
+
+.menu_info h3 {
+    font-size: 1.5rem; /* Font size for the price */
+    color: #f39c12; /* Orange color for the price */
+    margin-bottom: 15px;
+}
+
+.menu_icon {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px; /* Space between stars */
+}
+
+.menu_icon i {
+    color: #f1c40f; /* Yellow color for stars */
+    font-size: 20px;
+}
+
+.order-now {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #f1c40f; /* Yellow background color */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.order-now:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.order-now span {
+    position: relative;
+    z-index: 1;
+}
+/* General styling for menu images */
+.menu-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effect for zoom and shadow */
+}
+
+/* Hover effect */
+.menu-image img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+
+/* Styling for the menu header */
+.Menu h1 {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-size: 3rem; /* Adjust font size */
+    font-weight: 900; /* Bold and impactful */
+    color: #333; /* Base text color */
+    text-align: center; /* Center-align text */
+    margin-bottom: 2rem; /* Space below the heading */
+    position: relative; /* For pseudo-element positioning */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Space between letters */
+    overflow: hidden; /* Hide overflowing content */
+    background: linear-gradient(90deg, #ff6f61, #d83a5e); /* Gradient background */
+    -webkit-background-clip: text; /* Clip background to text */
+    color: transparent; /* Make text color transparent to show gradient */
+}
+
+/* Adding a subtle shadow to the text */
+.Menu h1::before {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute; /* Absolute positioning */
+    top: 0; /* Align with top of text */
+    left: 0; /* Align with left of text */
+    width: 100%; /* Full width of the text */
+    height: 100%; /* Full height of the text */
+    background: rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    z-index: -1; /* Place behind the text */
+    transform: translateY(2px); /* Slightly offset shadow */
+    filter: blur(3px); /* Blur the shadow */
+}
+
+/* Creating a glowing effect */
+.Menu h1::after {
+    content: ''; /* Empty content for the pseudo-element */
+    display: block; /* Block level element */
+    width: 100%; /* Full width of the text */
+    height: 4px; /* Height of the glow effect */
+    background: #ff6f61; /* Glow color */
+    position: absolute; /* Absolute positioning */
+    bottom: -10px; /* Position below the text */
+    left: 0; /* Align with left of text */
+    transform: scaleX(0); /* Start with no scale */
+    transform-origin: left; /* Scale from left */
+    transition: transform 0.4s ease-in-out; /* Smooth transition */
+}
+
+/* Hover effect for glowing underline */
+.Menu h1:hover::after {
+    transform: scaleX(1); /* Expand underline width on hover */
+}
+
+/* Basic styles for the navigation menu */
+nav {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    padding: 1rem 2rem; /* Padding around the nav */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Horizontal layout */
+    justify-content: center; /* Center align items */
+    gap: 1.5rem; /* Space between items */
+}
+
+/* Navigation list items */
+nav ul li {
+    position: relative; /* For positioning the hover effect */
+}
+
+/* Navigation links */
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Base text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family */
+    font-size: 1.2rem; /* Font size */
+    font-weight: 500; /* Font weight */
+    padding: 0.6rem 1.2rem; /* Padding around text */
+    border-radius: 0.5rem; /* Rounded corners */
+    display: inline-block; /* Inline-block for padding and border radius */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+}
+
+/* Hover effect for links */
+nav ul li a:hover {
+    color: #ff7e5f; /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background on hover */
+    transform: translateY(-3px); /* Slightly move up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Adding a subtle underline effect */
+nav ul li a::after {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute; /* Absolute positioning */
+    left: 0; /* Align with left of text */
+    bottom: -2px; /* Position below the text */
+    width: 100%; /* Full width of the text */
+    height: 2px; /* Height of the underline */
+    background: #ff7e5f; /* Underline color */
+    transform: scaleX(0); /* Start with no scale */
+    transform-origin: left; /* Scale from left */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Expanding underline effect on hover */
+nav ul li a:hover::after {
+    transform: scaleX(1); /* Expand underline width on hover */
+}
+
+
+/* Burger image container */
+.burger {
+    position: relative;
+    overflow: hidden;
+}
+
+.burger-image {
+    width: 100%;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.burger:hover .burger-image {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Additional styles to ensure proper image display */
+.container {
+    display: flex;
+    justify-content: center;
+}
+/* About section image */
+.about-image img {
+    width: 100%;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+/* Burger image container */
+.burger {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Adjust width as needed */
+}
+
+.burger-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.burger:hover .burger-image {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* About section image */
+.about-image {
+    width: 100%; /* Adjust width as needed */
+    overflow: hidden; /* Ensure the image doesn’t overflow the container */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Raleway:wght@700&display=swap');
+
+/* Main heading styles */
+h1 {
+    font-family: 'Playfair Display', serif; /* Elegant font */
+    font-size: 4rem; /* Larger size for prominence */
+    color: #2c3e50; /* Base color */
+    text-align: center; /* Center align the heading */
+    margin: 20px 0; /* Margin to space out the heading */
+    position: relative; /* Positioning for pseudo-elements */
+    overflow: hidden; /* Hide overflow of pseudo-elements */
+    line-height: 1.2; /* Adjust line height for better readability */
+}
+
+/* Text outline effect */
+h1 span {
+    position: relative; /* Relative positioning for pseudo-elements */
+    display: inline-block; /* Inline-block for spacing */
+    font-family: 'Raleway', sans-serif; /* Modern font for span text */
+    font-size: 4.5rem; /* Larger size for emphasis */
+    color: #ecf0f1; /* Light color for text */
+    text-transform: uppercase; /* Uppercase for emphasis */
+    text-shadow: 
+        0 0 5px rgba(0, 0, 0, 0.6), /* Subtle shadow effect */
+        0 0 10px rgba(0, 0, 0, 0.4); /* Glow effect */
+    transition: transform 0.4s ease-in-out, color 0.4s ease-in-out, text-shadow 0.4s ease-in-out; /* Smooth transition */
+}
+
+/* Pseudo-element for the outline effect */
+h1 span::before {
+    content: ''; /* Empty content for outline effect */
+    position: absolute; /* Absolute positioning for layering */
+    top: -5px; left: -5px; /* Offset for outline */
+    width: calc(100% + 10px); /* Full width with offset */
+    height: calc(100% + 10px); /* Full height with offset */
+    background: linear-gradient(135deg, #f39c12, #e74c3c); /* Gradient background */
+    -webkit-background-clip: text; /* Clip gradient to text */
+    background-clip: text; /* Clip gradient to text */
+    color: transparent; /* Hide default text color */
+    z-index: -1; /* Behind the text */
+    transition: opacity 0.4s ease-in-out; /* Smooth transition */
+}
+
+/* Enhanced hover effect */
+h1:hover span {
+    color: #f1f506; /* Change color of span text on hover */
+    text-shadow: 
+        0 0 15px rgba(0, 0, 0, 0.8), /* Enhanced shadow */
+        0 0 30px rgba(255, 255, 255, 0.8); /* Brighter glow */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+h1:hover span::before {
+    opacity: 0; /* Fade out gradient effect on hover */
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Paragraph styling */
+p {
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    font-size: 1.2rem; /* Slightly larger text for readability */
+    line-height: 1.6; /* Increased line height for better readability */
+    color: #34495e; /* Darker color for text */
+    text-align: justify; /* Justified alignment for neat appearance */
+    margin: 20px 0; /* Margin to space out the paragraph */
+    padding: 10px; /* Padding around the text */
+    background: rgba(236, 240, 241, 0.3); /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners for the background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect */
+p:hover {
+    background: rgba(236, 240, 241, 0.5); /* Slightly darker background on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+
+ .gallary{
+    width: 100%;
+    padding: 70px 0;
+
+ }
+
+.gallary h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+span {
+    color: #ff6347; /* Tomato color */
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.gallery-image-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover .gallery-description {
+    transform: translateY(0);
+}
+
+.gallery-description h3 {
+    margin: 0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.gallery-description p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.gallery-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff6347; /* Tomato color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.gallery-btn:hover {
+    background-color: #e5533e; /* Darker tomato color */
+}
+.reviews-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.reviews-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.reviews-section h1 span {
+    color: #e94b3c;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-card {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.review-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.review-card p {
+    font-size: 18px;
+    color: #555;
+}
+
+.review-card h4 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.review-line {
+    width: 60%;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.review-card:nth-child(even) {
+    transform: translateY(20px);
+}
+
+.review-card:nth-child(odd) {
+    transform: translateY(-20px);
+}
+
+/* Animation trigger */
+.review-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.reviews-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f3f3f3;
+}
+
+.reviews-section h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.reviews-section h1 span {
+    color: #ff6347;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Container for the review section */
+.reviews-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.reviews-section h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.reviews-section h1 span {
+    color: #ff6347;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px; /* Adjust space between cards */
+    overflow-x: auto;
+    padding-bottom: 20px; /* Add padding at the bottom for scrollbar */
+}
+
+/* Style for each review card */
+.review-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 250px; /* Adjust card width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    text-align: left;
+    position: relative;
+}
+
+.review-card::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #ffffff;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background-color: #fafafa;
+}
+
+.review-card img {
+    border-radius: 50%;
+    width: 80px; /* Adjust image size */
+    height: 80px; /* Adjust image size */
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover img {
+    transform: scale(1.1);
+}
+
+.review-card p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.4;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+}
+
+.review-card h4 {
+    font-size: 1.1em;
+    color: #ff6347;
+    margin-top: 5px;
+    font-family: 'Arial', sans-serif;
+    text-align: right;
+}
+
+/* Divider between reviews */
+.review-line {
+    display: none; /* Hide lines in a horizontal layout */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .review-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 20px;
+    }
+
+    .review-line {
+        display: block; /* Show lines in column layout if needed */
+    }
+}
+.reviews-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+.reviews-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.reviews-section h1 span {
+    color: #FF6347; /* Tomato color for emphasis */
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.review-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.review-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.review-card .stars {
+    font-size: 1.2rem;
+    color: #FFD700; /* Gold color for stars */
+    margin: 10px 0;
+}
+
+.review-card h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+.review-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.review-card-name {
+    font-weight: bold;
+    color: #333;
+}
+.reviews-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+.reviews-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.reviews-section h1 span {
+    color: #FF6347; /* Tomato color for emphasis */
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.review-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Verdana', sans-serif;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.review-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.review-card .stars {
+    font-size: 1.5rem; /* Larger stars */
+    color: #FFD700; /* Gold color for stars */
+    margin: 10px 0;
+}
+
+.review-card h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 5px 0;
+    text-align: center; /* Center the name */
+}
+
+.review-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+/* Reviews Section Styling */
+.reviews-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.reviews-section h1 {
+    font-family: mv boli;
+    font-size: 3.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.reviews-section h1 span {
+    color: #dbf308; /* Accent color */
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.reviews-section h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 4px;
+    background-color: #a86cf7; /* Accent color */
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.reviews-section h1:hover::after {
+    width: 100%;
+}
+
+/* Review Container Styling */
+.review-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Review Card Styling */
+.review-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.review-card .stars {
+    font-size: 1.2rem;
+    color: #eef76c;
+    margin-bottom: 10px;
+}
+
+.review-card .review-card-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Hover Effects for Review Cards */
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+}
+
+.review-heading::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background: #ff6f61;
+    transition: width 0.4s ease;
+}
+
+.review-heading:hover::before {
+    width: 100%;
+}
+
+.review-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    width: 100%;
+    height: 3px;
+    background: #ff6f61;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.review-heading:hover::after {
+    transform: scaleX(1);
+}
+
+
+.order{
+    width: 100%;
+    height:100vh;
+    padding: 70px 0;
+    background-image: url(c:\Users\Acer\Desktop\recipe image folder\download (4).jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.order h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#000;
+    font-size: 55px;
+}
+.order h1{
+    color: #fac031;
+    margin-right: 15px;
+    font-family: mv boli;
+
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 32px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    background-color: #fefbd1;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    background-color: #ff9800;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+/* Style for the Order Now heading */
+.order-heading {
+    font-family: 'Roboto', sans-serif; /* Applying the Google Font */
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    position: relative;
+    padding-bottom: 15px;
+    margin: 30px 0;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Spacing between letters */
+}
+
+/* Add an underline effect with a shadow */
+.order-heading::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.4s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Animate the underline effect on hover */
+.order-heading:hover::after {
+    width: 100%;
+}
+
+/* Adding a subtle text shadow */
+.order-heading {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+/* Our Team Section */
+.our-team {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+/* Team Title */
+.our-team-title {
+    font-size: 2.5em;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.4s ease;
+}
+
+/* Title Underline Decoration */
+.our-team-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #007bff;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+/* Title Hover Effect */
+.our-team-title:hover {
+    color: #007bff;
+}
+
+/* Title Hover Underline Effect */
+.our-team-title:hover::after {
+    width: 80px;
+    background-color: #0056b3;
+}
+
+/* Team Members Container */
+.team-members {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual Team Member */
+.team-member {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    max-width: 250px;
+    text-align: center;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.team-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 22%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+.social-links a i {
+    font-size: 18px;
+    margin-right: 5px;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.team-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 22%;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    border: 2px solid transparent;
+}
+
+.team-member:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: #007bff;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+}
+
+.team-member h3 {
+    font-size: 22px;
+    margin: 12px 0;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-member p {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    margin: 0 12px;
+    transition: color 0.4s ease;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+.social-links a i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+.team-section h2 {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.team-section h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #007bff;
+    left: 0;
+    bottom: 0;
+    transition: width 0.4s ease;
+}
+
+.team-section h2:hover {
+    color: #007bff;
+    transform: scale(1.05);
+}
+
+.team-section h2:hover::after {
+    width: 100%;
+}
+
+
+
+
+.footer {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    color: #333;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+    color: #555;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-column ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+    color: #ff9800;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.icon.facebook {
+    background-image: url('facebook-icon.png');
+}
+
+.icon.twitter {
+    background-image: url('twitter-icon.png');
+}
+
+.icon.instagram {
+    background-image: url('instagram-icon.png');
+}
+
+.icon.tiktok {
+    background-image: url('tiktok-icon.png');
+}
+
+.icon.linkedin {
+    background-image: url('linkedin-icon.png');
+}
+
+.icon.whatsapp {
+    background-image: url('whatsapp-icon.png');
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li:last-child {
+    margin-bottom: 0;
+}
+
+.design-by {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.design-by a {
+    color: #ff9800;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.design-by a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.our-team .team-member img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.our-team .team-member img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #00ace0;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-icon:hover {
+    background-color: #f1c40f;
+    transform: scale(1.1);
+}
